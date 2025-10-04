@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="res1"></p>
+    <button onclick="fun1()" style="background-color: darksalmon;">Ascending button</button>
+    <button onclick="fun2()" style="background-color:darkseagreen;"> Descending button</button>
+    <p id="res"></p>
+    <script>
+        var num=[23,10,24,56,88];
+        function fun3(n) {
+                return n*10;
+        }
+        var arr2 = num.map(fun3);
+        document.getElementById("res1").innerHTML="Mapped array-" + arr2;
+        function fun1() {
+            arr2.sort(function (a,b) {return a-b});
+            document.getElementById("res").innerHTML = "Ascending-" + arr2;
+        }
+         function fun2() {
+                arr2.sort(function (a, b) { return b - a });
+                document.getElementById("res").innerHTML = "Descending-" + arr2;
+            }
+
+    </script>
+</body>
+</html>
